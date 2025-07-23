@@ -269,7 +269,7 @@ export default function LandingPage() {
               <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded" />
               <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 border border-gray-300 rounded" />
               <textarea name="message" placeholder="Message or Business Type (optional)" rows={4} className="w-full p-3 border border-gray-300 rounded"></textarea>
-              <input type="hidden" name="_redirect" value="https://eivolv-website-one.vercel.app/thank-you-page" />
+              <input type="hidden" name="_redirect" value="https://eivolv-website-one.vercel.app/thank-you" />
               <button type="submit" className="bg-[#FF890A] text-white px-6 py-3 rounded-full hover:opacity-90 transition">Submit</button>
             </form>
           ) : (
