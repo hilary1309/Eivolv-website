@@ -258,45 +258,17 @@ export default function LandingPage() {
     <h3 className="text-3xl font-semibold text-center text-black mb-10">Contact Us / Join Waitlist</h3>
 
     <form
-      action="https://formspree.io/f/xanbejna"
-      method="POST"
-      className="space-y-6"
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-        className="w-full p-3 border border-gray-300 rounded"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-        className="w-full p-3 border border-gray-300 rounded"
-      />
-      <textarea
-        name="message"
-        placeholder="Message or Business Type (optional)"
-        rows={4}
-        className="w-full p-3 border border-gray-300 rounded"
-      ></textarea>
+  action="/api/contact"
+  method="POST"
+  className="space-y-6"
+>
+  <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded" />
+  <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 border border-gray-300 rounded" />
+  <textarea name="message" placeholder="Message or Business Type (optional)" rows={4} className="w-full p-3 border border-gray-300 rounded"></textarea>
 
-      {/* Only use this if your form is verified on Formspree */}
-      <input
-        type="hidden"
-        name="_redirect"
-        value="https://eivolv-website-one.vercel.app/thank-you"
-      />
+  <button type="submit" className="bg-[#FF890A] text-white px-6 py-3 rounded-full hover:opacity-90 transition">Submit</button>
+</form>
 
-      <button
-        type="submit"
-        className="bg-[#FF890A] text-white px-6 py-3 rounded-full hover:opacity-90 transition"
-      >
-        Submit
-      </button>
-    </form>
   </div>
 </section>
 
