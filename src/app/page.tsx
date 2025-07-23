@@ -255,9 +255,7 @@ export default function LandingPage() {
       {/* Contact + Waitlist */}
       <section id="contact" className="bg-white py-20 px-6">
   <div className="max-w-2xl mx-auto">
-    <h3 className="text-3xl font-semibold text-center text-black mb-10">
-      Contact Us / Join Waitlist
-    </h3>
+    <h3 className="text-3xl font-semibold text-center text-black mb-10">Contact Us / Join Waitlist</h3>
 
     <form
       action="https://formspree.io/f/xanbejna"
@@ -285,7 +283,7 @@ export default function LandingPage() {
         className="w-full p-3 border border-gray-300 rounded"
       ></textarea>
 
-      {/* ✅ Formspree Redirect */}
+      {/* Only use this if your form is verified on Formspree */}
       <input
         type="hidden"
         name="_redirect"
@@ -301,6 +299,7 @@ export default function LandingPage() {
     </form>
   </div>
 </section>
+
 
 
 
