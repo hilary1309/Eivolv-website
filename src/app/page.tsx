@@ -261,9 +261,6 @@ export default function LandingPage() {
             <form
               action="https://formspree.io/f/xanbejna"
               method="POST"
-              onSubmit={(e) => {
-                setTimeout(() => setFormSubmitted(true), 500); // allow time for redirect
-              }}
               className="space-y-6"
             >
               <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded" />
