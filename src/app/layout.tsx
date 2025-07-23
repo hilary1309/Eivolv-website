@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eivolv | Smart Business Platform",
-  description: "AI-powered business management for Africa.",
+  title: "Eivolv",
+  description: "Empowering African businesses with AI-powered tools",
+  icons: {
+    icon: "/favicon.ico", // or "/logo.png" if you want
+  },
 };
 
 export default function RootLayout({
