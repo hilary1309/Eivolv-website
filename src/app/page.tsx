@@ -254,28 +254,54 @@ export default function LandingPage() {
 
       {/* Contact + Waitlist */}
       <section id="contact" className="bg-white py-20 px-6">
-        <div className="max-w-2xl mx-auto">
-          <h3 className="text-3xl font-semibold text-center text-black mb-10">Contact Us / Join Waitlist</h3>
+  <div className="max-w-2xl mx-auto">
+    <h3 className="text-3xl font-semibold text-center text-black mb-10">
+      Contact Us / Join Waitlist
+    </h3>
 
-          {!formSubmitted ? (
-            <form
-              action="https://formspree.io/f/xanbejna"
-              method="POST"
-              className="space-y-6"
-            >
-              <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded" />
-              <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 border border-gray-300 rounded" />
-              <textarea name="message" placeholder="Message or Business Type (optional)" rows={4} className="w-full p-3 border border-gray-300 rounded"></textarea>
-              <input type="hidden" name="_redirect" value="https://eivolv-website-one.vercel.app/thank-you" />
-              <button type="submit" className="bg-[#FF890A] text-white px-6 py-3 rounded-full hover:opacity-90 transition">Submit</button>
-            </form>
-          ) : (
-            <div className="text-center text-green-600 font-semibold text-lg">
-              ✅ Thank you! We’ll be in touch soon.
-            </div>
-          )}
-        </div>
-      </section>
+    <form
+      action="https://formspree.io/f/xanbejna"
+      method="POST"
+      className="space-y-6"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        className="w-full p-3 border border-gray-300 rounded"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        className="w-full p-3 border border-gray-300 rounded"
+      />
+      <textarea
+        name="message"
+        placeholder="Message or Business Type (optional)"
+        rows={4}
+        className="w-full p-3 border border-gray-300 rounded"
+      ></textarea>
+
+      {/* ✅ Formspree Redirect */}
+      <input
+        type="hidden"
+        name="_redirect"
+        value="https://eivolv-website-one.vercel.app/thank-you"
+      />
+
+      <button
+        type="submit"
+        className="bg-[#FF890A] text-white px-6 py-3 rounded-full hover:opacity-90 transition"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+
 
 
         {/* App Download Section */}
