@@ -261,16 +261,16 @@ export default function LandingPage() {
             <form
               action="https://formspree.io/f/xanbejna"
               method="POST"
-              onSubmit={() => setFormSubmitted(true)}
+              onSubmit={(e) => {
+                setTimeout(() => setFormSubmitted(true), 500); // allow time for redirect
+              }}
               className="space-y-6"
             >
               <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded" />
               <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 border border-gray-300 rounded" />
               <textarea name="message" placeholder="Message or Business Type (optional)" rows={4} className="w-full p-3 border border-gray-300 rounded"></textarea>
+              <input type="hidden" name="_redirect" value="https://eivolv-website-one.vercel.app/thank-you" />
               <button type="submit" className="bg-[#FF890A] text-white px-6 py-3 rounded-full hover:opacity-90 transition">Submit</button>
-              <input type="hidden" name="_redirect" value="http://localhost:3000/thank-you
-" />
-
             </form>
           ) : (
             <div className="text-center text-green-600 font-semibold text-lg">
@@ -279,6 +279,7 @@ export default function LandingPage() {
           )}
         </div>
       </section>
+
 
         {/* App Download Section */}
       <section id="download" className="py-20 px-6 bg-gradient-to-br from-[#fff7f2] via-white to-[#fce9dd] text-center">
